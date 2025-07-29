@@ -1,11 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marco Palumbo - Bassista</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #1e1e1e, #111);
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p, header a {
+      color: #bbb;
+    }
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #e63946;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .lang-toggle {
+      text-align: right;
+      margin: 1rem;
+    }
+    .lang-toggle button {
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+  </style>
+  <script>
+    function toggleLanguage(lang) {
+      const it = document.querySelectorAll('.it');
+      const en = document.querySelectorAll('.en');
+      it.forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
+      en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    }
+    window.onload = () => toggleLanguage('it');
+  </script>
 </head>
 <body>
   <div class="lang-toggle">
@@ -15,41 +67,25 @@
 
   <header>
     <h1>Marco Palumbo</h1>
-    <p class="it">Bassista professionista | Sessione, Live</p>
-    <p class="en">Professional Bassist | Session, live</p>
     <p><a href="https://www.instagram.com/marcopalumbo_bassist" target="_blank">Instagram</a></p>
-    <img src="hero.jpg" alt="Marco Palumbo Hero" class="hero-image">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="eventi.html">Eventi</a>
+      <a href="video.html">Video</a>
+    </nav>
   </header>
 
   <section class="bio">
     <h2>Bio</h2>
     <div class="it">
-      <!-- Italian bio text -->
+      <!-- Biografia italiana -->
+      <p>Marco Palumbo, Classe 2002. Affascinato dalla musica fin da piccolo, si innamora del basso durante la scuola media...</p>
+      <!-- TRUNCATO per brevità. Inserire tutta la bio completa -->
     </div>
     <div class="en">
-      <!-- English bio text -->
+      <!-- Placeholder English translation -->
+      <p>Marco Palumbo, born in 2002. Passionate about music since childhood... (English version coming soon)</p>
     </div>
   </section>
-
-  <section id="eventi">
-    <h2 class="it">Eventi Futuri</h2>
-    <h2 class="en">Upcoming Events</h2>
-    <ul class="events-list">
-      <li>
-        <strong>10 Agosto 2025</strong> -
-        <span class="it">Concerto a Lecce con i Kamafei</span>
-        <span class="en">Concert in Lecce with Kamafei</span>
-      </li>
-      <li>
-        <strong>20 Settembre 2025</strong> -
-        <span class="it">Live show con Joaniti a Milano</span>
-        <span class="en">Live show with Joaniti in Milan</span>
-      </li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Marco Palumbo</p>
-  </footer>
 </body>
 </html>
