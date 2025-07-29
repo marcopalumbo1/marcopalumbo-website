@@ -1,0 +1,11 @@
+<!-- ... stessa intestazione HTML ... -->
+<form name="contact-it" method="POST" data-netlify="true" action="/grazie.html">
+  <input type="hidden" name="form-name" value="contact-it">
+  <!-- campi modulo -->
+</form>
+
+<!-- versione inglese -->
+<form name="contact-en" method="POST" data-netlify="true" action="/grazie.html">
+  <input type="hidden" name="form-name" value="contact-en">
+  <!-- campi modulo -->
+</form>
