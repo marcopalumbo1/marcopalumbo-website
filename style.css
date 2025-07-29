@@ -16,6 +16,9 @@ header {
   display: block;
   margin: 0 auto;
 }
+.bio-text {
+  text-align: justify;
+}
 section {
   padding: 2rem 1rem;
   max-width: 1000px;
