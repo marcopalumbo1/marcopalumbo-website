@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marco Palumbo - Biography</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background-color: #f4f4f4; color: #333; }
+        .lang-switch { margin-bottom: 1rem; }
+        .section { margin-bottom: 2rem; }
+        button { padding: 0.5rem 1rem; margin-right: 1rem; cursor: pointer; }
+        h1 { color: #005588; }
+        form input, form textarea {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+    <script>
+        function switchLang(lang) {
+            document.getElementById("bio-it").style.display = lang === "it" ? "block" : "none";
+            document.getElementById("bio-en").style.display = lang === "en" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="lang-switch">
+        <button onclick="switchLang('it')">Italiano</button>
+        <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <div id="bio-it" class="section">
+        <h1>Biografia</h1>
+        <p>Marco Palumbo, Classe 2002. Affascinato dalla musica fin da piccolo, si innamora del basso durante la scuola media e decide di approfondire lo studio prendendo lezioni di strumento sotto la guida del Maestro Valerio Bruno, in arte Combass. Bassista/produttore degli Après La Classe e turnista di fama nazionale e non... [testo completo qui]</p>
+    </div>
+
+    <div id="bio-en" class="section" style="display:none">
+        <h1>Biography</h1>
+        <p>Marco Palumbo, born in 2002. Fascinated by music since childhood, he fell in love with the bass guitar during middle school and began studying under Maestro Valerio Bruno, known as Combass – bassist/producer of Après La Classe and a nationally renowned session player... [full English text here]</p>
+    </div>
+
+    <div class="section">
+        <h1>Contact</h1>
+        <form action="mailto:infopalumboma@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
