@@ -38,20 +38,37 @@ footer {
 }
 .galleria-tre {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
-  flex-wrap: wrap; /* così su schermi piccoli vanno sotto */
+  justify-content: center;
+  margin: 40px 0;
 }
 
 .galleria-tre figure {
-  flex: 1;
+  flex: 1 1 100%;
   text-align: center;
+  margin: 0;
 }
 
 .galleria-tre img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.galleria-tre figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* Quando lo schermo è più largo di 768px, le figure diventano 3 colonne */
+@media (min-width: 768px) {
+  .galleria-tre figure {
+    flex: 0 0 calc(33.33% - 20px);
+  }
 }
 
 .events-list {
