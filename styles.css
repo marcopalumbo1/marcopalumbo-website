@@ -79,7 +79,6 @@ a {
   .galleria-tre figure {
     flex: 0 0 calc(33.33% - 20px);
   }
-}
 
 .lang-toggle {
   position: absolute;
