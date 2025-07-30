@@ -1,3 +1,13 @@
+<style>
+    body {
+        background-image: foto1.jpg ; /* Percorso della tua immagine */
+        background-size: cover; /* L'immagine copre tutta la pagina */
+        background-position: center; /* L'immagine è centrata */
+        background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+        height: 100vh; /* Imposta l'altezza al 100% della viewport */
+        margin: 0; /* Rimuovi margini */
+    }
+</style>
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
