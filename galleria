@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galleria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      width: calc(33.33% - 20px);
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @media screen and (max-width: 768px) {
+      .gallery-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galleria</h1>
+
+  <div class="gallery">
+    <!-- RIGA 1 -->
+    <div class="gallery-item">
+      <img src="foto1.jpg" alt="Foto 1">
+      <div class="caption">Festa Dei Lampioni</div>
+    </div>
+    <div class="gallery-item">
+      <img src="2024-10-22 18.22.23.jpg" alt="2024-10-22 18.22.23">
+      <div class="caption">Concertone Li Ucci Festival 2024</div>
+    </div>
+    <div class="gallery-item">
+      <img src="2024-10-21 18.26.36.jpg" alt="2024-10-21 18.26.36">
+      <div class="caption">Tappa Notte Della Taranta 2024</div>
+    </div>
+
+    <!-- RIGA 2 -->
+    <div class="gallery-item">
+      <img src="img/foto4.jpg" alt="Foto 4">
+      <div class="caption">Didascalia 4</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/foto5.jpg" alt="Foto 5">
+      <div class="caption">Didascalia 5</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/foto6.jpg" alt="Foto 6">
+      <div class="caption">Didascalia 6</div>
+    </div>
+
+    <!-- RIGA 3 -->
+    <div class="gallery-item">
+      <img src="img/foto7.jpg" alt="Foto 7">
+      <div class="caption">Didascalia 7</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/foto8.jpg" alt="Foto 8">
+      <div class="caption">Didascalia 8</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/foto9.jpg" alt="Foto 9">
+      <div class="caption">Didascalia 9</div>
+    </div>
+
+    <!-- RIGA 4 -->
+    <div class="gallery-item">
+      <img src="img/foto10.jpg" alt="Foto 10">
+      <div class="caption">Didascalia 10</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/foto11.jpg" alt="Foto 11">
+      <div class="caption">Didascalia 11</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/foto12.jpg" alt="Foto 12">
+      <div class="caption">Didascalia 12</div>
+    </div>
+  </div>
+
+</body>
+</html>
