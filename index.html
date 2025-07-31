@@ -76,11 +76,23 @@
 </head>
 </style>
 <body>
-
-<!-- HERO SECTION CON SFONDO -->
+  <div class="lang-toggle">
+    <button onclick="toggleLanguage('it')">Italiano</button>
+    <button onclick="toggleLanguage('en')">English</button>
+  </div>
+</header>
+  <!-- HERO SECTION CON SFONDO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Marco Palumbo, bassista | compositore</h1>
+    <h1>Marco Palumbo</h1>
+    <h2>Bassista | Compositore</h2>
+    <p><a href="https://www.instagramcom/marcopalumbo_bassist" target="_blank">Instagram</a></p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="galleria.html">Galleria</a>
+    <a href="video.html">Video</a>
+  </nav>
+</header>
   </div>
 </section>
 
@@ -115,6 +127,12 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
   }
+  .hero h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  }
 
   @media (max-width: 768px) {
     .hero h1 {
@@ -122,23 +140,6 @@
     }
   }
 </style>
-
-  <div class="lang-toggle">
-    <button onclick="toggleLanguage('it')">Italiano</button>
-    <button onclick="toggleLanguage('en')">English</button>
-  </div>
-</header>
-  <header>
-  <h1>Marco Palumbo</h1>
-  <h2 class="it">Bassista | Compositore</h2>
-  <h2 class="en">Bassist | Composer</h2>
-  <p><a href="https://www.instagramcom/marcopalumbo_bassist" target="_blank">Instagram</a></p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="galleria.html">Galleria</a>
-    <a href="video.html">Video</a>
-  </nav>
-</header>
 
   <section class="bio">
     <!-- Versione italiana -->
