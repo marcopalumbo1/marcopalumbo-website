@@ -329,92 +329,135 @@ In addition to his experience and live career, he cultivated media growth by wor
   </style>
   <section id="galleria" style="padding: 5rem 2rem; background: #111; color: #fff;">
   <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem; letter-spacing: 2px;">GALLERIA</h2>
-  <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
+  <!-- GALLERIA -->
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-    .gallery-card {
-      background: #1e1e1e;
-      border-radius: 15px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
+  .gallery-card {
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 
-    .gallery-card:hover {
-      transform: translateY(-10px);
-    }
+  .gallery-card:hover {
+    transform: scale(1.03);
+  }
 
-    .gallery-img-wrapper {
-      overflow: hidden;
-      height: 220px;
-    }
+  .gallery-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-    .gallery-img-wrapper img {
+  .gallery-card p {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #1a1a1a;
+  }
+
+  /* MODALE */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 600px) {
+    .modal-content {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
     }
+  }
+</style>
 
-    .gallery-card:hover .gallery-img-wrapper img {
-      transform: scale(1.1);
-    }
-
-    .gallery-card p {
-      padding: 1rem;
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    @media (max-width: 600px) {
-      .gallery-img-wrapper {
-        height: 180px;
-      }
-      .gallery-card p {
-        font-size: 1rem;
-      }
-    }
-  </style>
-
-  <div class="gallery-grid">
-    <!-- Card 1 -->
-    <div class="gallery-card">
-      <div class="gallery-img-wrapper">
-        <img src="foto1.jpg" alt="foto1.jpg">
-      </div>
-      <p>Festa Dei Lampioni - 2024</p>
+<div class="gallery-grid">
+  <!-- Card 1 -->
+  <div class="gallery-card" onclick="openModal('foto1.jpg')">
+    <div class="gallery-img-wrapper">
+      <img src="foto1.jpg" alt="Festa Dei Lampioni">
     </div>
+    <p>Festa Dei Lampioni - 2024</p>
+  </div>
 
-    <!-- Card 2 -->
-    <div class="gallery-card">
-      <div class="gallery-img-wrapper">
-        <img src="2024-10-21 18.26.36.jpg" alt="2024-10-21 18.26.36.jpg">
-      </div>
-      <p>Tappa Notte Della Taranta - 2024</p>
+  <!-- Card 2 -->
+  <div class="gallery-card" onclick="openModal('2024-10-21 18.26.36.jpg')">
+    <div class="gallery-img-wrapper">
+      <img src="2024-10-21 18.26.36.jpg" alt="Tappa Notte Della Taranta">
     </div>
+    <p>Tappa Notte Della Taranta - 2024</p>
+  </div>
 
-    <!-- Card 3 -->
-    <div class="gallery-card">
-      <div class="gallery-img-wrapper">
-        <img src="2024-10-22 18.22.23.jpg" alt="2024-10-22 18.22.23.jpg">
-      </div>
-      <p>Concertone LiUcci Festival - 2024</p>
+  <!-- Card 3 -->
+  <div class="gallery-card" onclick="openModal('2024-10-22 18.22.23.jpg')">
+    <div class="gallery-img-wrapper">
+      <img src="2024-10-22 18.22.23.jpg" alt="Concertone LiUcci Festival">
     </div>
+    <p>Concertone LiUcci Festival - 2024</p>
+  </div>
 
-    <!-- Card 4 -->
-    <div class="gallery-card">
-      <div class="gallery-img-wrapper">
-        <img src="immagini/4.jpg" alt="Live Teatro Apollo">
-      </div>
-      <p>Live Teatro Apollo - 2023</p>
+  <!-- Card 4 -->
+  <div class="gallery-card" onclick="openModal('immagini/4.jpg')">
+    <div class="gallery-img-wrapper">
+      <img src="immagini/4.jpg" alt="Live Teatro Apollo">
     </div>
+    <p>Live Teatro Apollo - 2023</p>
+  </div>
+</div>
+
+<!-- MODALE -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("imgModal").style.display = "block";
+    document.getElementById("modalImage").src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
+
 
 
 
