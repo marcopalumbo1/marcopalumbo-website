@@ -422,13 +422,13 @@ In addition to his experience and live career, he cultivated media growth by wor
 </section>
 
 <body>
-  <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #222; padding: 2rem;">
+  <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f4f4f4; padding: 2rem;">
     <!-- Contenitore principale -->
     <div style="width: 100%; max-width: 600px; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
 
       <!-- ITALIANO -->
       <div class="it">
-        <h1>Contattami</h1>
+        <h1 style="color: red;">Contattami</h1>
         <p>Per Collaborazioni, Sessioni in studio e Live scrivimi qui!</p>
         <form name="contact-it" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact-it">
@@ -438,13 +438,13 @@ In addition to his experience and live career, he cultivated media growth by wor
           <input type="email" id="email" name="email" required />
           <label for="messaggio">Messaggio</label>
           <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
-          <button type="submit">Invia</button>
+          <button type="submit" style="background-color: red;">Invia</button>
         </form>
       </div>
 
       <!-- INGLESE -->
       <div class="en" style="display: none;">
-        <h1>Contact Me</h1>
+        <h1 style="color: red;">Contact Me</h1>
         <p>For Collaborations, Studio Sessions and Live Shows contact me here!</p>
         <form name="contact-en" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact-en">
@@ -454,12 +454,16 @@ In addition to his experience and live career, he cultivated media growth by wor
           <input type="email" id="email" name="email" required />
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" required></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" style="background-color: red;">Send</button>
         </form>
-     
+      </div>
+
+    </div>
+  </div>
+
   <style>
     form {
-      text-align: center;
+      text-align: left;
       margin-top: 1rem;
     }
     label {
@@ -478,19 +482,14 @@ In addition to his experience and live career, he cultivated media growth by wor
     button {
       margin-top: 1.5rem;
       padding: 0.8rem 1.5rem;
-      background: black;
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
     }
   </style>
-
-  <script>
-    // Mostra sezione italiana o inglese in base a classe esterna
-    // Puoi continuare a gestire la visibilità dal tuo script principale
-  </script>
 </body>
+
  </div>
 
 
