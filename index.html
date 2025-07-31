@@ -63,37 +63,6 @@
     color: #FFFFFF;
   }
 </style>
-  
-  <script>
-    function toggleLanguage(lang) {
-      const it = document.querySelectorAll('.it');
-      const en = document.querySelectorAll('.en');
-      it.forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
-      en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-    }
-    window.onload = () => toggleLanguage('it');
-  </script>
-</head>
-</style>
-<body>
-  <div class="lang-toggle">
-    <button onclick="toggleLanguage('it')">Italiano</button>
-    <button onclick="toggleLanguage('en')">English</button>
-  </div>
-</header>
-  <!-- HERO SECTION CON SFONDO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Marco Palumbo</h1>
-    <h2>Bassista | Compositore</h2>
-    <p><a href="https://www.instagramcom/marcopalumbo_bassist" target="_blank">Instagram</a></p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="galleria.html">Galleria</a>
-    <a href="video.html">Video</a>
-  </nav>
-</header>
-</div>
 <style>
   .hero {
     background-image: url ('2024-10-21 18.26.36.jpg'); /* Cambia il percorso se serve */
@@ -138,6 +107,37 @@
     }
   }
 </style>
+  
+  <script>
+    function toggleLanguage(lang) {
+      const it = document.querySelectorAll('.it');
+      const en = document.querySelectorAll('.en');
+      it.forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
+      en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    }
+    window.onload = () => toggleLanguage('it');
+  </script>
+</head>
+</style>
+<body>
+  <div class="lang-toggle">
+    <button onclick="toggleLanguage('it')">Italiano</button>
+    <button onclick="toggleLanguage('en')">English</button>
+  </div>
+</header>
+  <!-- HERO SECTION CON SFONDO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Marco Palumbo</h1>
+    <h2>Bassista | Compositore</h2>
+    <p><a href="https://www.instagramcom/marcopalumbo_bassist" target="_blank">Instagram</a></p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="galleria.html">Galleria</a>
+    <a href="video.html">Video</a>
+  </nav>
+</header>
+</div>
 </section>
   <section class="bio">
     <!-- Versione italiana -->
