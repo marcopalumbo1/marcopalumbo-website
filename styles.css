@@ -46,39 +46,40 @@ a {
   color: #e63946;
   text-decoration: none;
 }
-.galleria-tre {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: 40px 0;
-}
-
-.galleria-tre figure {
-  flex: 1 1 100%;
+.gallery-card {
+  background: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
   text-align: center;
-  margin: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
-.galleria-tre img {
+.gallery-card:hover {
+  transform: translateY(-10px);
+}
+
+.gallery-img-wrapper {
+  overflow: hidden;
+  height: 220px;
+}
+
+.gallery-img-wrapper img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.galleria-tre figcaption {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  color: #555;
-  font-style: italic;
+.gallery-card:hover .gallery-img-wrapper img {
+  transform: scale(1.1);
 }
 
-/* Quando lo schermo è più largo di 768px, le figure diventano 3 colonne */
-@media (min-width: 768px) {
-  .galleria-tre figure {
-    flex: 0 0 calc(33.33% - 20px);
-  }
+.gallery-card p {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
 
 .lang-toggle {
   position: absolute;
