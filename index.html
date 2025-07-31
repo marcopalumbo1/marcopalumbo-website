@@ -421,74 +421,55 @@ In addition to his experience and live career, he cultivated media growth by wor
   </div>
 </section>
 
-<body>
-  <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f4f4f4; padding: 2rem;">
-    <!-- Contenitore principale -->
-    <div style="width: 100%; max-width: 600px; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center;">
-
-      <!-- ITALIANO -->
-      <div class="it">
-        <h1 style="color: red;">Contattami</h1>
-        <p>Per Collaborazioni, Sessioni in studio e Live scrivimi qui!</p>
-        <form name="contact-it" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact-it">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" required />
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-          <label for="messaggio">Messaggio</label>
-          <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
-          <button type="submit" style="background-color: red;">Invia</button>
-        </form>
-      </div>
-
-      <!-- INGLESE -->
-      <div class="en" style="display: none;">
-        <h1 style="color: red;">Contact Me</h1>
-        <p>For Collaborations, Studio Sessions and Live Shows contact me here!</p>
-        <form name="contact-en" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact-en">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-          <button type="submit" style="background-color: red;">Send</button>
-        </form>
-      </div>
-
+<section style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f9f9f9; padding: 2rem;">
+  <div style="width: 100%; max-width: 600px; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); text-align: center;">
+    
+    <!-- Sezione IT -->
+    <div class="it">
+      <h1 style="color: red; margin-bottom: 1rem;">Contattami</h1>
+      <p style="margin-bottom: 2rem; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2rem; color: #000; font-weight: 600;">
+        Per Collaborazioni, Sessioni in studio e Live scrivimi qui!
+      </p>
+      <form name="contact-it" method="POST" data-netlify="true" style="display: flex; flex-direction: column; align-items: center;">
+        <input type="hidden" name="form-name" value="contact-it">
+        
+        <input type="text" name="nome" placeholder="Nome" required
+          style="width: 100%; margin-bottom: 1rem; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px;" />
+        
+        <input type="email" name="email" placeholder="Email" required
+          style="width: 100%; margin-bottom: 1rem; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px;" />
+        
+        <textarea name="messaggio" placeholder="Messaggio" rows="6" required
+          style="width: 100%; margin-bottom: 1.5rem; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+        
+        <button type="submit" style="padding: 0.7rem 2rem; background-color: red; color: white; border: none; border-radius: 6px; cursor: pointer;">Invia</button>
+      </form>
     </div>
-  </div>
 
-  <style>
-    form {
-      text-align: left;
-      margin-top: 1rem;
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.2rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    button {
-      margin-top: 1.5rem;
-      padding: 0.8rem 1.5rem;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-  </style>
-</body>
+    <!-- Sezione EN -->
+    <div class="en" style="display: none;">
+      <h1 style="color: red; margin-bottom: 1rem;">Contact Me</h1>
+      <p style="margin-bottom: 2rem; font-family: 'Trebuchet MS', sans-serif; font-size: 1.2rem; color: #000; font-weight: 600;">
+        For Collaboration, Studio Sessions and Live Shows contact me here!
+      </p>
+      <form name="contact-en" method="POST" data-netlify="true" style="display: flex; flex-direction: column; align-items: center;">
+        <input type="hidden" name="form-name" value="contact-en">
+        
+        <input type="text" name="name" placeholder="Name" required
+          style="width: 100%; margin-bottom: 1rem; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px;" />
+        
+        <input type="email" name="email" placeholder="Email" required
+          style="width: 100%; margin-bottom: 1rem; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px;" />
+        
+        <textarea name="message" placeholder="Message" rows="6" required
+          style="width: 100%; margin-bottom: 1.5rem; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+        
+        <button type="submit" style="padding: 0.7rem 2rem; background-color: red; color: white; border: none; border-radius: 6px; cursor: pointer;">Send</button>
+      </form>
+    </div>
+
+  </div>
+</section>
 
  </div>
 
