@@ -189,6 +189,91 @@ In addition to his experience and live career, he cultivated media growth by wor
     </div>
   </section>
   </div>
+  <section id="eventi">
+  <h2>Eventi</h2>
+  <div class="event-grid">
+    <div class="event-card">
+      <img src="img/evento1.jpg" alt="Evento 1">
+      <div class="event-info">
+        <h3>Concerto a Lecce</h3>
+        <p>10 Agosto 2025 — Funk dal vivo nel cuore del Salento.</p>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="img/evento2.jpg" alt="Evento 2">
+      <div class="event-info">
+        <h3>Festival della Taranta</h3>
+        <p>20 Settembre 2025 — Con i Kamafei sul palco della tradizione.</p>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="img/evento3.jpg" alt="Evento 3">
+      <div class="event-info">
+        <h3>Live @ Roma</h3>
+        <p>1 Ottobre 2025 — Special guest e nuove collaborazioni live.</p>
+      </div>
+    </div>
+    <div class="event-card">
+      <img src="img/evento4.jpg" alt="Evento 4">
+      <div class="event-info">
+        <h3>Orchestra Li Ucci</h3>
+        <p>15 Novembre 2025 — Concerto finale a Cutrofiano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+#eventi {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #000, #111);
+  color: white;
+  text-align: center;
+}
+#eventi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.event-card:hover {
+  transform: scale(1.03);
+}
+.event-card img {
+  width: 100%;
+  display: block;
+  filter: brightness(60%);
+  transition: filter 0.3s;
+}
+.event-card:hover img {
+  filter: brightness(80%);
+}
+.event-info {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5rem;
+  color: white;
+  text-align: left;
+}
+.event-info h3 {
+  margin: 0 0 0.5rem;
+}
+.event-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+</style>
   <header>
   <h1>EVENTI</h1>
   <h2>9 AGOSTO - NdT2025 Cutrofiano</h2>
