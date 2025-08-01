@@ -61,7 +61,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+ 
+  <!-- Lightbox2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
 <style>
   .gallery-card p {
     font-family: 'Poppins', sans-serif;
@@ -445,72 +448,84 @@ In addition to his experience and live career, he cultivated media growth by wor
   <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem; letter-spacing: 2px;">GALLERIA</h2>
     
     <!-- GALLERIA -->
-<section class="gallery-section">
-  <div class="gallery-grid">
+<section class="gallery-grid">
+  <div class="gallery-card">
     
   <!-- Immagine 1 -->
     <div class="gallery-card">
-      <img src="foto1.jpg" alt="Festa Dei Lampioni" onclick="openLightbox(this)">
+     <a href="foto1.jpg" data-lightbox="galleria" data-title="Festa Dei Lampioni - 2024">
+      <img src="immagini/foto1.jpg" alt="Festa Dei Lampioni">
+    </a>
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 2 -->
     <div class="gallery-card">
-      <img src="2024-10-21 18.26.36.jpg" alt="Tappa Notte della Taranta" onclick="openLightbox(this)">
+     <a href="2024-10-21 18.26.36.jpg" data-lightbox="galleria" data-title="Tappa Notte Della Taranta - 2024">
+      <img src="2024-10-21 18.26.36.jpg" alt="Tappa Notte della Taranta">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 3 -->
     <div class="gallery-card">
-      <img src="2024-10-22 18.22.23.jpg" alt="Concertone LiUcci Festival" onclick="openLightbox(this)">
+     <a href="2024-10-22 18.22.23.jpg" data-lightbox="galleria" data-title="2024-10-22 18.22.23.jpg"> 
+      <img src="2024-10-22 18.22.23.jpg" alt="Concertone LiUcci Festival">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 4 -->
     <div class="gallery-card">
-      <img src="1000087410.JPG" alt="1000087410.JPG" onclick="openLightbox(this)">
+      <a href="1000087410.JPG" data-lightbox="galleria" data-title="1000087410.JPG">  
+      <img src="1000087410.JPG" alt="1000087410.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 5 -->
     <div class="gallery-card">
-      <img src="619d56de-abec-4a14-90d2-888a3cc9336d.JPG" alt="619d56de-abec-4a14-90d2-888a3cc9336d.JPG" onclick="openLightbox(this)">
+    <a href="619d56de-abec-4a14-90d2-888a3cc9336d.JPG" data-lightbox="galleria" data-title="619d56de-abec-4a14-90d2-888a3cc9336d.JPG">  
+      <img src="619d56de-abec-4a14-90d2-888a3cc9336d.JPG" alt="619d56de-abec-4a14-90d2-888a3cc9336d.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 6 -->
     <div class="gallery-card">
-      <img src="1000102728.JPG" alt="1000102728.JPG" onclick="openLightbox(this)">
+    <a href="1000102728.JPG" data-lightbox="galleria" data-title="1000102728.JPG">  
+      <img src="1000102728.JPG" alt="1000102728.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 7 -->
     <div class="gallery-card">
-      <img src="1000187746.JPG" alt="1000187746.JPG" onclick="openLightbox(this)">
+    <a href="1000187746.JPG" data-lightbox="galleria" data-title="1000187746.JPG"> 
+      <img src="1000187746.JPG" alt="1000187746.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 8 -->
     <div class="gallery-card">
-      <img src="1000093043.JPG" alt="1000093043.JPG" onclick="openLightbox(this)">
+    <a href="1000093043.JPG" data-lightbox="galleria" data-title="1000093043.JPG"> 
+      <img src="1000093043.JPG" alt="1000093043.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 9 -->
     <div class="gallery-card">
-      <img src="1000093049.JPG" alt="1000093049.JPG" onclick="openLightbox(this)">
+     <a href="1000093049.JPG" data-lightbox="galleria" data-title="1000093049.JPG"> 
+      <img src="1000093049.JPG" alt="1000093049.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 10 -->
     <div class="gallery-card">
-      <img src="Immagine sfondo.JPG" alt="Immagine sfondo.JPG" onclick="openLightbox(this)">
+     <a href="Immagine sfondo.JPG" data-lightbox="galleria" data-title="Immagine sfondo.JPG"> 
+      <img src="Immagine sfondo.JPG" alt="Immagine sfondo.JPG">
       <p class="caption"></p>
     </div>
 
     <!-- Immagine 11 -->
     <div class="gallery-card">
-      <img src="1000087410.JPG" alt="1000087410.JPG" onclick="openLightbox(this)">
+    <a href="1000087410.JPG" data-lightbox="galleria" data-title="1000087410.JPG"> 
+      <img src="1000087410.JPG" alt="1000087410.JPG">
       <p class="caption"></p>
     </div>
 
@@ -602,6 +617,11 @@ In addition to his experience and live career, he cultivated media growth by wor
   display: block;
   object-fit: cover;
   border: none;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+  transform: scale(1.03);
 }
 
 .caption {
@@ -612,7 +632,6 @@ In addition to his experience and live career, he cultivated media growth by wor
   text-align: center;
   background-color: #111;
   font-size: 0.95rem;
-  line-height: 1.4;
 }
 
 /* Responsive */
@@ -705,6 +724,8 @@ In addition to his experience and live career, he cultivated media growth by wor
 
  </div>
 
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
   <script>
     function toggleLang(lang) {
