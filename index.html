@@ -446,7 +446,6 @@ In addition to his experience and live career, he cultivated media growth by wor
     
     <!-- GALLERIA -->
 <section class="gallery-section">
-  <h2 class="gallery-title">Galleria</h2>
   <div class="gallery-grid">
     
   <!-- Immagine 1 -->
@@ -572,6 +571,12 @@ In addition to his experience and live career, he cultivated media growth by wor
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -582,31 +587,35 @@ In addition to his experience and live career, he cultivated media growth by wor
 }
 
 .gallery-card {
+  background-color: #000;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
-  align-items: auto;
+  align-items: stretch;
 }
 
 .gallery-card img {
   width: 100%;
   height: auto;
   display: block;
-  border: none;
   object-fit: cover;
+  border: none;
 }
 
 .caption {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  background-color: #111;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
-/* Responsive layout */
+/* Responsive */
 @media (max-width: 992px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
