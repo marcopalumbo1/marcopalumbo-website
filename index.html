@@ -113,7 +113,25 @@
     }
   }
 </style>
-  
+<style>
+  .social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* o left/right a seconda del layout */
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #ff3333; /* o altro colore di hover */
+}
+</style>
   <script>
     function toggleLanguage(lang) {
       const it = document.querySelectorAll('.it');
@@ -136,7 +154,12 @@
   <div class="hero-content">
     <h1>Marco Palumbo</h1>
     <h2>Bassista | Compositore</h2>
-    <p><a href="https://www.instagramcom/marcopalumbo_bassist" target="_blank">Instagram</a></p>
+    <div class="social-links">
+  <a href="https://www.instagram.com/marcopalumbo_bassist/?__pwa=1" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://open.spotify.com/artist/tuoid" target="_blank"><i class="fab fa-spotify"></i></a>
+  <a href="https://www.facebook.com/tuonome" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+
   <nav>
     <a href="index.html">HOME</a>
     <a href="News.html">NEWS</a>
