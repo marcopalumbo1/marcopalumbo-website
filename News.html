@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News | Marco Palumbo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff3333;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .lang-toggle {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: 1px solid #ff3333;
+      color: #ff3333;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .lang-toggle button:hover {
+      background: #ff3333;
+      color: #fff;
+    }
+
+    .news-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .news-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 51, 51, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .news-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(255, 51, 51, 0.2);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .news-content {
+      padding: 1.5rem;
+    }
+
+    .news-content h2 {
+      font-size: 1.4rem;
+      color: #ff3333;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-content .date {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .news-content p {
+      font-size: 1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NEWS</h1>
+    <p class="it">Rimani aggiornato su progetti, uscite e collaborazioni.</p>
+    <p class="en" style="display:none;">Stay up to date on projects, releases and collaborations.</p>
+    <div class="lang-toggle">
+      <button onclick="toggleLang('it')">IT</button>
+      <button onclick="toggleLang('en')">EN</button>
+    </div>
+  </header>
+
+  <section class="news-container">
+    <!-- NEWS 1 -->
+    <div class="news-card">
+      <img src="immagini/news1.jpg" alt="Copertina singolo">
+      <div class="news-content">
+        <h2 class="it">Nuovo singolo in uscita!</h2>
+        <h2 class="en" style="display:none;">New Single Coming Soon!</h2>
+        <p class="date">29 Settembre 2025</p>
+        <p class="it">Il mio nuovo brano sarà disponibile dal 15 ottobre su tutte le piattaforme digitali. Un mix di groove e vibrazioni mediterranee.</p>
+        <p class="en" style="display:none;">My new track drops October 15 on all digital platforms. A blend of groove and Mediterranean vibes.</p>
+      </div>
+    </div>
+
+    <!-- NEWS 2 -->
+    <div class="news-card">
+      <img src="immagini/news2.jpg" alt="Live Otranto">
+      <div class="news-content">
+        <h2 class="it">Live a Otranto</h2>
+        <h2 class="en" style="display:none;">Live in Otranto</h2>
+        <p class="date">15 Luglio 2025</p>
+        <p class="it">Un evento unico nel centro storico di Otranto, tra scenografie naturali e sonorità contemporanee.</p>
+        <p class="en" style="display:none;">A unique concert in the historic heart of Otranto, mixing natural scenery with modern sounds.</p>
+      </div>
+    </div>
+
+    <!-- NEWS 3 -->
+    <div class="news-card">
+      <img src="immagini/news3.jpg" alt="Studio session">
+      <div class="news-content">
+        <h2 class="it">Nuovo progetto internazionale</h2>
+        <h2 class="en" style="display:none;">New International Project</h2>
+        <p class="date">1 Giugno 2025</p>
+        <p class="it">Sto lavorando con artisti da Berlino e New York per un EP che fonde funk, hip-hop e radici salentine.</p>
+        <p class="en" style="display:none;">I'm collaborating with artists from Berlin and New York on an EP blending funk, hip-hop, and Salento roots.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleLang(lang) {
+      const elementsIT = document.querySelectorAll('.it');
+      const elementsEN = document.querySelectorAll('.en');
+      elementsIT.forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
+      elementsEN.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    }
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = '0.1s';
+          entry.target.style.opacity = 1;
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.news-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+</body>
+</html>
