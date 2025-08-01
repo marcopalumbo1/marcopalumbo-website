@@ -32,7 +32,17 @@
       text-decoration: none;
     }
 
-.lang-toggle button {
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .bio {
+      text-align: justify; /* Applicato stile giustificato */
+    }
+  </style>
+  <style>
+  .lang-toggle button {
   background: none;
   color: #fff;
   border: 1px solid #fff;
@@ -46,15 +56,6 @@
 .lang-toggle button:hover {
   background: #fff;
   color: #000;
-}
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .bio {
-      text-align: justify; /* Applicato stile giustificato */
-    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -80,7 +81,7 @@
     position: relative;
   }
 
-  .hero::before {
+  .hero:before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
