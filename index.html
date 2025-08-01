@@ -574,61 +574,50 @@ In addition to his experience and live career, he cultivated media growth by wor
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonne */
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
+.gallery-card {
+  background-color: #000; /* sfondo opzionale */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Responsive layout */
 @media (max-width: 992px) {
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 600px) {
   .gallery-grid {
-    grid-template-columns: 1fr; /* 1 colonna su mobile */
+    grid-template-columns: 1fr;
   }
 }
-  /* LIGHTBOX */
-  .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.4s ease;
-  }
-
-  .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    animation: zoomIn 0.3s ease;
-  }
-
-  @keyframes zoomIn {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @media (max-width: 600px) {
-    .gallery-title {
-      font-size: 2rem;
-    }
-  }
 </style>
 
 <script>
