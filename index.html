@@ -536,7 +536,26 @@ In addition to his experience and live career, he cultivated media growth by wor
     margin-bottom: 2rem;
     color: #ff3b3b;
   }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
 
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 colonna su mobile */
+  }
+}
   .gallery-card {
   display: flex;
   flex-direction: column;
