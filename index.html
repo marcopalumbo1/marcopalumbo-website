@@ -448,7 +448,112 @@ In addition to his experience and live career, he cultivated media growth by wor
   <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem; letter-spacing: 2px;">GALLERIA</h2>
     
     <!-- GALLERIA -->
-<section class="gallery-grid">
+<style>
+  .gallery-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #111;
+    color: white;
+  }
+
+  .gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff3b3b;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+    margin: 0 auto;
+  }
+
+  .gallery-card {
+    background: #111;
+    color: #fff;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 59, 59, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .gallery-card:hover {
+    transform: scale(1.03);
+  }
+
+  .gallery-img-wrapper img {
+  .gallery-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .gallery-card p {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #1a1a1a;
+  }
+
+  /* MODALE */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  .caption {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    background-color: #222;
+  }
+
+  @media screen and (max-width: 600px) {
+    .modal-content {
+      width: 100%;
+  @media (max-width: 600px) {
+    .gallery-title {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+    <section class="gallery-grid">
     
   <!-- Immagine 1 -->
     <div class="gallery-card">
@@ -536,99 +641,6 @@ In addition to his experience and live career, he cultivated media growth by wor
   <img id="lightbox-img" src="" alt="Immagine ingrandita">
 </div>
 
-<style>
-  .gallery-section {
-    padding: 3rem 1rem;
-    text-align: center;
-    background-color: #111;
-    color: white;
-  }
-
-  .gallery-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #ff3b3b;
-  }
-
-
-.gallery-card:hover {
-  transform: scale(1.02);
-}
-
-.gallery-card img {
-  display: block;
-  width: 100%;
-  height: auto; /* Altezza automatica per adattarsi alla larghezza */
-  object-fit: cover; /* oppure "contain" se vuoi mostrare tutta l'immagine */
-  margin: 0;
-  border: auto;
-}
-
-.caption {
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: #eee;
-  background-color: ;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 2rem;
-  max-width: auto;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.gallery-card {
-  background-color: #111;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
-}
-
-.gallery-card img {
-  width: auto;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.caption {
-  padding: 0.7rem 1rem;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  text-align: center;
-  background-color: ;
-}
-
-/* Responsive: 2 colonne su tablet */
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Responsive: 1 colonna su mobile */
-@media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
 
 <script>
   function openLightbox(img) {
