@@ -62,19 +62,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
  
-  <!-- Lightbox2 CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 
-<style>
-  .gallery-card p {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: 0.8rem;
-    color: #FFFFFF;
-  }
-</style>
+
+
   <style>
 .hero {
   background-image: url('foto1.jpg'); /* Sostituisci con il percorso corretto */
@@ -85,6 +77,59 @@
   color: white; /* Se serve contrasto con lo sfondo */
 }
 </style>
+<style>  
+.gallery-section {
+  padding: 4rem 2rem;
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2.8rem;
+  font-family: 'Poppins', sans-serif; /* come sezione Eventi */
+  font-weight: 700;
+  color: #ff3333;
+  margin-bottom: 3rem;
+}
+
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 0;
+}
+
+.masonry-gallery a {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  border-radius: 4px;
+}
+
+.masonry-gallery a:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+</style>  
 <style>
   .hero {
       position: relative;
@@ -444,202 +489,34 @@ In addition to his experience and live career, he cultivated media growth by wor
       margin-right: 1rem;
     }
   </style>
+ 
   <section id="galleria" style="padding: 5rem 2rem; background: #111; color: #fff;">
   <h2 style="text-align: center; font-size: 3rem; margin-bottom: 3rem; letter-spacing: 2px;">GALLERIA</h2>
     
-    <!-- GALLERIA -->
-<style>
-  .gallery-section {
-    padding: 3rem 1rem;
-    text-align: center;
-    background-color: #111;
-    color: white;
-  }
+  <!-- GALLERIA SECTION -->
+<section id="galleria" class="gallery-section">
+  <h2 id="gallery-title">GALLERIA</h2>
 
-  .gallery-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #ff3b3b;
-  }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: auto;
-    margin: 0 auto;
-  }
-
-  .gallery-card {
-    background: #111;
-    color: #fff;
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 59, 59, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-
-  .gallery-card:hover {
-    transform: scale(1.03);
-  }
-
-  .gallery-img-wrapper img {
-  .gallery-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .gallery-card p {
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    background: #1a1a1a;
-  }
-
-  /* MODALE */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-  }
-
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 10px;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-  .caption {
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    color: #eee;
-    background-color: #222;
-  }
-
-  @media screen and (max-width: 600px) {
-    .modal-content {
-      width: 100%;
-  @media (max-width: 600px) {
-    .gallery-title {
-      font-size: 2rem;
-    }
-  }
-</style>
-
-    <section class="gallery-grid">
-    
-  <!-- Immagine 1 -->
-    <div class="gallery-card">
-     <a href="foto1.jpg" data-lightbox="galleria" data-title="Festa Dei Lampioni - 2024">
-      <img src="immagini/foto1.jpg" alt="Festa Dei Lampioni">
-    </a>
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 2 -->
-    <div class="gallery-card">
-     <a href="2024-10-21 18.26.36.jpg" data-lightbox="galleria" data-title="Tappa Notte Della Taranta - 2024">
-      <img src="2024-10-21 18.26.36.jpg" alt="Tappa Notte della Taranta">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 3 -->
-    <div class="gallery-card">
-     <a href="2024-10-22 18.22.23.jpg" data-lightbox="galleria" data-title="2024-10-22 18.22.23.jpg"> 
-      <img src="2024-10-22 18.22.23.jpg" alt="Concertone LiUcci Festival">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 4 -->
-    <div class="gallery-card">
-      <a href="1000087410.JPG" data-lightbox="galleria" data-title="1000087410.JPG">  
-      <img src="1000087410.JPG" alt="1000087410.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 5 -->
-    <div class="gallery-card">
-    <a href="619d56de-abec-4a14-90d2-888a3cc9336d.JPG" data-lightbox="galleria" data-title="619d56de-abec-4a14-90d2-888a3cc9336d.JPG">  
-      <img src="619d56de-abec-4a14-90d2-888a3cc9336d.JPG" alt="619d56de-abec-4a14-90d2-888a3cc9336d.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 6 -->
-    <div class="gallery-card">
-    <a href="1000102728.JPG" data-lightbox="galleria" data-title="1000102728.JPG">  
-      <img src="1000102728.JPG" alt="1000102728.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 7 -->
-    <div class="gallery-card">
-    <a href="1000187746.JPG" data-lightbox="galleria" data-title="1000187746.JPG"> 
-      <img src="1000187746.JPG" alt="1000187746.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 8 -->
-    <div class="gallery-card">
-    <a href="1000093043.JPG" data-lightbox="galleria" data-title="1000093043.JPG"> 
-      <img src="1000093043.JPG" alt="1000093043.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 9 -->
-    <div class="gallery-card">
-     <a href="1000093049.JPG" data-lightbox="galleria" data-title="1000093049.JPG"> 
-      <img src="1000093049.JPG" alt="1000093049.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 10 -->
-    <div class="gallery-card">
-     <a href="Immagine sfondo.JPG" data-lightbox="galleria" data-title="Immagine sfondo.JPG"> 
-      <img src="Immagine sfondo.JPG" alt="Immagine sfondo.JPG">
-      <p class="caption"></p>
-    </div>
-
-    <!-- Immagine 11 -->
-    <div class="gallery-card">
-    <a href="1000087410.JPG" data-lightbox="galleria" data-title="1000087410.JPG"> 
-      <img src="1000087410.JPG" alt="1000087410.JPG">
-      <p class="caption"></p>
-    </div>
-
+  <div class="masonry-gallery">
+    <!-- 14 immagini -->
+    <a href="immagini/foto1.jpg" data-lightbox="gallery"><img src="immagini/foto1.jpg" alt="foto1"></a>
+    <a href="immagini/foto2.jpg" data-lightbox="gallery"><img src="immagini/foto2.jpg" alt="foto2"></a>
+    <a href="immagini/foto3.jpg" data-lightbox="gallery"><img src="immagini/foto3.jpg" alt="foto3"></a>
+    <a href="immagini/foto4.jpg" data-lightbox="gallery"><img src="immagini/foto4.jpg" alt="foto4"></a>
+    <a href="immagini/foto5.jpg" data-lightbox="gallery"><img src="immagini/foto5.jpg" alt="foto5"></a>
+    <a href="immagini/foto6.jpg" data-lightbox="gallery"><img src="immagini/foto6.jpg" alt="foto6"></a>
+    <a href="immagini/foto7.jpg" data-lightbox="gallery"><img src="immagini/foto7.jpg" alt="foto7"></a>
+    <a href="immagini/foto8.jpg" data-lightbox="gallery"><img src="immagini/foto8.jpg" alt="foto8"></a>
+    <a href="immagini/foto9.jpg" data-lightbox="gallery"><img src="immagini/foto9.jpg" alt="foto9"></a>
+    <a href="immagini/foto10.jpg" data-lightbox="gallery"><img src="immagini/foto10.jpg" alt="foto10"></a>
+    <a href="immagini/foto11.jpg" data-lightbox="gallery"><img src="immagini/foto11.jpg" alt="foto11"></a>
+    <a href="immagini/foto12.jpg" data-lightbox="gallery"><img src="immagini/foto12.jpg" alt="foto12"></a>
+    <a href="immagini/foto13.jpg" data-lightbox="gallery"><img src="immagini/foto13.jpg" alt="foto13"></a>
+    <a href="immagini/foto14.jpg" data-lightbox="gallery"><img src="immagini/foto14.jpg" alt="foto14"></a>
   </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Immagine ingrandita">
-</div>
+    
 
 
 <script>
@@ -719,8 +596,9 @@ In addition to his experience and live career, he cultivated media growth by wor
 
  </div>
 
-<!-- Lightbox2 JS -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 
   <script>
     function toggleLang(lang) {
