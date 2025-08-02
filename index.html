@@ -30,10 +30,26 @@
     header p, header a {
       color: #bbb;
     }
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
+    .nav-left, .nav-center, .nav-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  left: 1rem;
+}
+
+.nav-center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-right {
+  right: 1rem;
+}
     nav a {
       color: #e63946;
       margin: 0 1rem;
@@ -204,8 +220,11 @@
     }
 
     nav {
-      margin-top: 20px;
-    }
+  position: relative;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
 
     nav a {
       margin: 0 15px;
@@ -247,13 +266,26 @@
     backdrop-filter: blur(10px); /* sfocatura dietro */
     font-family: 'Poppins', sans-serif;
   }
-  .nav-left,
-  .nav-center,
-  .nav-right {
+  .nav-left, .nav-center, .nav-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 1rem;
-  }
+}
+
+.nav-left {
+  left: 1rem;
+}
+
+.nav-center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-right {
+  right: 1rem;
+}
   .navbar a {
     color: #fff;
     text-decoration: none;
