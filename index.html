@@ -202,74 +202,84 @@
 </head>
 </style>
 <body>
-  <!-- NAVBAR FISSA IN ALTO -->
+ <!-- NAVBAR FISSA IN ALTO -->
 <style>
- /* BARRA IN ALTO FISSA */
-.top-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Trasparenza elegante */
-  backdrop-filter: blur(5px); /* Effetto vetro satinato */
-  z-index: 1000;
-  padding: 0.5rem 1rem;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ff3333;
-}
-
-/* BOTTONI LINGUA */
-.lang-buttons button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  padding: 0;
-}
-
-.lang-buttons img {
-  height: 24px;
-  width: auto;
-  transition: transform 0.2s ease;
-}
-
-.lang-buttons img:hover {
-  transform: scale(1.1);
-}
-
-/* RESPONSIVE NAV */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.6); /* sfondo trasparente */
+    backdrop-filter: blur(10px); /* sfocatura dietro */
+    font-family: 'Poppins', sans-serif;
   }
 
-  .nav-links {
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #ff4d4d;
+  }
+
+  .lang-buttons {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
   }
-}
+
+  .lang-buttons button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .lang-buttons button:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  body {
+    padding-top: 80px; /* sposta il contenuto sotto la navbar */
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .lang-buttons {
+      margin-top: 0.5rem;
+    }
+  }
 </style>
+
+<div class="navbar">
+  <!-- Link di navigazione -->
+  <div class="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="video.html">VIDEO</a>
+    <a href="News.html">NEWS</a>
+  </div>
+
+  <!-- Pulsanti lingua -->
+  <div class="lang-buttons">
+    <button onclick="showLanguage('it')">IT</button>
+    <button onclick="showLanguage('en')">EN</button>
+  </div>
+</div>
 
 <div class="navbar">
   <!-- Link di navigazione -->
