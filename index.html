@@ -227,25 +227,25 @@
     backdrop-filter: blur(10px); /* sfocatura dietro */
     font-family: 'Poppins', sans-serif;
   }
-  .nav-left, .nav-center, .nav-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-}
-
+  
 .nav-left {
   left: 1rem;
+  gap: 1rem; /* distanza tra i loghi */
+  align-items: center;
 }
 
 .nav-center {
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* distanza tra i loghi */
 }
 
 .nav-right {
   right: 1rem;
+  align-items: center;
+  gap: 1rem; /* distanza tra i loghi */
 }
   .navbar a {
     color: #fff;
@@ -329,10 +329,10 @@
   <div class="hero-content">
     <h1>Marco Palumbo</h1>
     <div class="it">
-    <h2>Bassista | Compositore</h2>
+    <h2>Bassista di Sessione/Live | Compositore</h2>
     </div>
     <div class="en">
-    <h2>Bassist | Composer</h2>
+    <h2>Session/Live Bassist | Composer</h2>
     </div>
   </div>
   
