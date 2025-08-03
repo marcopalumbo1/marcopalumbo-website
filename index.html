@@ -199,15 +199,6 @@
       color: #ff3333;
     }
   </style>
-  <script>
-    function toggleLanguage(lang) {
-      const it = document.querySelectorAll('.it');
-      const en = document.querySelectorAll('.en');
-      it.forEach(el => el.style.display = lang === 'it' ? 'block' : 'none');
-      en.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
-    }
-    window.onload = () => toggleLanguage('it');
-  </script>
 </head>
 </style>
 <body>
@@ -706,6 +697,7 @@ In addition to his experience and live career, he cultivated media growth by wor
       enElements.forEach(el => el.style.display = 'block');
     }
   }
+</script>
     &copy; 2025 Marco Palumbo. Tutti i diritti riservati.
   </footer>
 </body>
