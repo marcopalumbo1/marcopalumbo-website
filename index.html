@@ -693,11 +693,19 @@ In addition to his experience and live career, he cultivated media growth by wor
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 
-  <script>
-    function toggleLang(lang) {
-      document.getElementById('contact-it').style.display = lang === 'it' ? 'block' : 'none';
-      document.getElementById('contact-en').style.display = lang === 'en' ? 'block' : 'none';
+<script>
+  function showLanguage(lang) {
+    const itElements = document.querySelectorAll('.it');
+    const enElements = document.querySelectorAll('.en');
+
+    if (lang === 'it') {
+      itElements.forEach(el => el.style.display = 'block');
+      enElements.forEach(el => el.style.display = 'none');
+    } else {
+      itElements.forEach(el => el.style.display = 'none');
+      enElements.forEach(el => el.style.display = 'block');
     }
+  }
     &copy; 2025 Marco Palumbo. Tutti i diritti riservati.
   </footer>
 </body>
