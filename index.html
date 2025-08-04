@@ -180,24 +180,7 @@
       color: #ff3333;
     }
 
-    nav {
-  position: relative;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ff3333;
-    }
   </style>
 </head>
 </style>
@@ -241,7 +224,17 @@
   top: 50%;
   gap: 1rem; /* distanza tra i loghi */
 }
- 
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    color: #ff4d4d;
+  }
 
   .lang-buttons {
     display: flex;
