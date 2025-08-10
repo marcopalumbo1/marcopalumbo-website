@@ -82,6 +82,15 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0;
 }
+  .galleria-collassata {
+  max-height: 400px; /* altezza iniziale ridotta */
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.galleria-espansa {
+  max-height: 2000px; /* abbastanza grande per mostrare tutto */
+}
 .gallery-section {
   padding: 4rem 2rem;
   background: #0d0d0d;
@@ -572,7 +581,7 @@ In addition to his experience and live career, he cultivated media growth by wor
 
     
   <!-- GALLERIA SECTION -->
-<section id="galleria" class="gallery-section">
+<section id="galleria" class="gallery-collassata">
   <div class="it">
   <h2 id="gallery-title">GALLERIA</h2>
   </div>
@@ -599,6 +608,7 @@ In addition to his experience and live career, he cultivated media growth by wor
   </div>
 </section>
 
+  <button id="toggle-galleria">Mostra tutta la galleria</button>
 
   </div>
 </section>
@@ -681,6 +691,20 @@ In addition to his experience and live career, he cultivated media growth by wor
   }
   window.onload = () => showLanguage('it');
 </script>
+
+  <script>
+    const galleria = document.getElementById("galleria");
+const toggleBtn = document.getElementById("toggle-galleria");
+
+toggleBtn.addEventListener("click", () => {
+  galleria.classList.toggle("galleria-espansa");
+  if (galleria.classList.contains("galleria-espansa")) {
+    toggleBtn.textContent = "Riduci galleria";
+  } else {
+    toggleBtn.textContent = "Mostra tutta la galleria";
+  }
+});
+  </script>
     &copy; 2025 Marco Palumbo. Tutti i diritti riservati.
   </footer>
 </body>
