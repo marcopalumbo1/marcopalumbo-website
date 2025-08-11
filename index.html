@@ -280,32 +280,139 @@
   }
 </style>
 
+
+  
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR BASE */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Parti della navbar */
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* SOCIAL CENTER */
+.nav-center a {
+  color: white;
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* BANDIERE */
+.nav-right img {
+  width: 28px;
+  height: auto;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+/* MENU A TENDINA */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 60px; /* distanza sotto navbar */
+  left: 0;
+  width: 200px;
+  padding: 1rem;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
-  
-  <!-- Link di navigazione -->
-<div class="nav-left">
-  <div class="nav-links">
-    <a href="index.html">HOME</a>
-    <a href="video.html">VIDEO</a>
-    <a href="News.html">NEWS</a>
-  </div>
-</div>
- <!-- Link Social centrati -->
-<div class="nav-center">
-  <div class="social-links">
-  <a href="https://www.instagram.com/marcopalumbo_bassist/?__pwa=1" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://open.spotify.com/artist/tuoid" target="_blank"><i class="fab fa-spotify"></i></a>
-  <a href="https://www.facebook.com/share/171kXUTf8L/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+  <!-- Hamburger a sinistra -->
+  <div class="nav-left">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-</div>
+  </div>
+
+  <!-- Social al centro -->
+  <div class="nav-center social-links">
+    <a href="https://www.instagram.com/marcopalumbo_bassist/?__pwa=1" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://open.spotify.com/artist/tuoid" target="_blank"><i class="fab fa-spotify"></i></a>
+    <a href="https://www.facebook.com/share/171kXUTf8L/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
   
-  <!-- Pulsanti lingua -->
+  <!-- Pulsanti a destra -->
 <div class="nav-right">
   <div class="lang-buttons">
     <button onclick="showLanguage('it')">🇮🇹</button>
     <button onclick="showLanguage('en')">🇬🇧</button>
   </div>
 </div>
+
+<!-- MENU A TENDINA -->
+<div class="nav-menu" id="nav-menu">
+  <a href="index.html">HOME</a>
+  <a href="video.html">VIDEO</a>
+  <a href="news.html">NEWS</a>
+</div>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+</script>
+
+</body>
+
 </nav>
 
   
