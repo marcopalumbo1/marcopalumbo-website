@@ -45,6 +45,7 @@
       margin: 2rem auto;
       padding: 0 1rem;
     }
+    
     .container {
   width: 90%;
   max-width: 1200px;
@@ -78,17 +79,16 @@
 </style>
 <style>  
   .gallery {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0;
 }
-  .galleria-collassata {
+  .gallery-collassata {
   max-height: 50px; /* altezza iniziale ridotta */
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
 
-.galleria-espansa {
+.gallery-espansa {
   max-height: 2000px; /* abbastanza grande per mostrare tutto */
 }
 .gallery-collassata {
