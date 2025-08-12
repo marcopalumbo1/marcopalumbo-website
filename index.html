@@ -129,16 +129,6 @@
   transform: scale(1.05);
   filter: brightness(1.2);
 }
-.galleria img {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.galleria img.ingrandita {
-  transform: scale(1.5);
-  z-index: 1000;
-  position: relative;
-}
 
 </style>  
 <style>
@@ -833,13 +823,6 @@ toggleBtn.addEventListener("click", () => {
 });
   </script>
   
-  <script>
-  document.querySelectorAll('.galleria img').forEach(img => {
-    img.addEventListener('click', () => {
-      img.classList.toggle('ingrandita');
-    });
-  });
-</script>
 
     &copy; 2025 Marco Palumbo. Tutti i diritti riservati.
   </footer>
